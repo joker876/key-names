@@ -2,7 +2,6 @@
 
 export const KEY_MAP: { matcher: RegExp | string, result: string | [string, string] | ((key: string, useShort: boolean) => string) }[] = [
     //string matchers
-    { matcher: 'alt', result: '⎇ Alt' },
     { matcher: 'tab', result: 'Tab ↹' },
     { matcher: 'enter', result: '↵ Enter' },
     { matcher: 'space', result: 'Space' },
@@ -33,7 +32,8 @@ export const KEY_MAP: { matcher: RegExp | string, result: string | [string, stri
     { matcher: /^((right)?control|controlright)$/, result: ['Right Ctrl', 'Right Control'] },
     { matcher: /^(cmd|command)$/, result: ['⌘ Cmd', '⌘ Command'] },
     { matcher: /^opt(ion)?$/, result: ['⌥ Opt', '⌥ Option'] },
-    { matcher: /^altgr(aph)?|alrright$/, result: ['⎇ Alt Gr', '⎇ Alt Graph'] },
+    { matcher: /^(altgr(aph)?|altright|rightalt)$/, result: ['⎇ Alt Gr', '⎇ Alt Graph'] },
+    { matcher: /^(alt(left)?|leftalt)$/, result: '⎇ Alt' },
     { matcher: /^esc(ape)?$/, result: ['Esc', 'Escape'] },
     { matcher: /^ins(ert)?$/, result: ['Ins', 'Insert'] },
     { matcher: /^del(ete)?$/, result: ['Del', 'Delete'] },
