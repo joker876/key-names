@@ -1,0 +1,12 @@
+# folders
+node_modules
+
+# files
+package-lock.json
+.vscode/dialcode.code-snippets
+
+# playground files
+PLAYGROUND
+
+# dist files
+dist

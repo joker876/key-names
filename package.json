@@ -1,27 +1,46 @@
 {
-  "name": "key-names",
-  "version": "1.0.0",
-  "description": "Convert key codes to easily readable names.",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joker876/key-names.git"
-  },
-  "keywords": [
-    "key-names",
-    "keys",
-    "keycodes",
-    "keynames",
-    "keyboard",
-    "shortcut"
-  ],
-  "author": "joker876",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joker876/key-names/issues"
-  },
-  "homepage": "https://github.com/joker876/key-names#readme"
+    "name": "key-names",
+    "version": "1.0.0",
+    "description": "Convert key codes to easily readable names.",
+    "main": "dist/index.js",
+    "files": [
+        "dist/*"
+    ],
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "npm run build && npx jasmine",
+        "start": "ts-node-dev --respawn src/index.ts",
+        "build": "rmdir /s /Q dist & tsc",
+        "build-web": "npm run build && npm exec webpack",
+        "deploy": "gh-pages -d dist/browser"
+    },
+    "devDependencies": {
+        "@types/jasmine": "^4.0.3",
+        "@types/jest": "^29.2.3",
+        "jasmine": "^4.1.0",
+        "jasmine-ts-console-reporter": "^3.1.1",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.6.3",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.11.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joker876/key-names.git"
+    },
+    "keywords": [
+        "key-names",
+        "keys",
+        "keycodes",
+        "keynames",
+        "keyboard",
+        "shortcut"
+    ],
+    "author": "joker876",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/joker876/key-names/issues"
+    },
+    "homepage": "https://github.com/joker876/key-names#readme"
 }
