@@ -1,5 +1,5 @@
 {
-    "name": "key-names",
+    "name": "key-display-names",
     "version": "1.0.0",
     "description": "Convert key codes to easily readable names.",
     "main": "dist/index.js",
