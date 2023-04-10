@@ -4,12 +4,12 @@ module.exports = {
     entry: './dist/index.js',
     mode: 'production',
     output: {
-        filename: 'edit-history.min.js',
+        filename: 'key-names.min.js',
         path: path.resolve(__dirname, 'dist/browser'),
-        library: 'EditHistory',
+        library: 'KeyNames',
         libraryTarget: 'umd',
         umdNamedDefine: true,
-        auxiliaryComment: 'An implementation of a simple edit history class.',
+        auxiliaryComment: 'Convert key codes to easily readable names.',
     },
     devServer: {
         compress: true,
