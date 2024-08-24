@@ -36,12 +36,20 @@ describe('keyToString - KEY_MAP Tests', () => {
   it('should correctly map every key in KEY_MAP, but in SaRcAsM CaSe', () => {
     for (const [key, value] of Object.entries(KEY_MAP)) {
       if (typeof value === 'string') {
-        expect(keyToString(_toSarcasmCase(key), true)).withContext(`Failed for key: ${key} (short form)`).toBe(value);
-        expect(keyToString(_toSarcasmCase(key), false)).withContext(`Failed for key: ${key} (long form)`).toBe(value);
+        expect(keyToString(_toSarcasmCase(key), true))
+          .withContext(`Failed for key: ${key} (short form)`)
+          .toBe(value);
+        expect(keyToString(_toSarcasmCase(key), false))
+          .withContext(`Failed for key: ${key} (long form)`)
+          .toBe(value);
       } else if (Array.isArray(value)) {
         const [shortForm, longForm] = value;
-        expect(keyToString(_toSarcasmCase(key), true)).withContext(`Failed for key: ${key} (short form)`).toBe(shortForm);
-        expect(keyToString(_toSarcasmCase(key), false)).withContext(`Failed for key: ${key} (long form)`).toBe(longForm);
+        expect(keyToString(_toSarcasmCase(key), true))
+          .withContext(`Failed for key: ${key} (short form)`)
+          .toBe(shortForm);
+        expect(keyToString(_toSarcasmCase(key), false))
+          .withContext(`Failed for key: ${key} (long form)`)
+          .toBe(longForm);
       }
     }
   });

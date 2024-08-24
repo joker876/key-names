@@ -17,5 +17,8 @@ export function keyToString(key: string, useShort: boolean = true) {
     key = side + code;
   }
   //convert from "PascalCase" to "Title Case"
-  return key.replace(/([A-Z])/g, ' $1').replace(/\s\s+/g, ' ').trim();
+  return key
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/\s\s+/g, ' ')
+    .trim();
 }
